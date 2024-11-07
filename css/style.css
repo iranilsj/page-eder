@@ -1,0 +1,1040 @@
+/*  imports a font  poppins do google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*CORES*/
+:root {
+    --header-color: #006C40;
+    --footer-color: #006C40;
+    --body-color: #ffffffff;
+    --text-color-wht: #ffffffff;
+    --hover-color: #FF982D;
+    --text-color-blk: #000000;
+    --back-cookies-color: #333;
+    --btn-cookies-color: #4CAF50;
+
+    --menu-hamburguer: #333;
+}
+
+/*/CORES*/
+
+/*BODY-CONFIG*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+/*BODY-CONFIG*/
+
+/*HTML-CONFIG*/
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+/*/HTML-CONFIG*/
+
+
+/*CABEÇALHO-CONFIG*/
+header {
+    top: 0;
+    left: 0;
+    padding: 1.1rem;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    background-color: var(--header-color);
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: var(--text-color-wht);
+    cursor: default;
+}
+
+.nav-responsivo {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--header-color);
+    display: none;
+}
+
+.nav a, .nav-responsivo a {
+    font-size: 1.2rem;
+    color: var(--text-color-wht);
+    padding: 0.5rem 1rem;
+    transition: 0.4s;
+}
+
+.nav a:hover, .nav-responsivo a:hover {
+    color: var(--hover-color);
+}
+
+/*/CABEÇALHO-CONFIG*/
+
+/*CAPA*/
+.img {
+    text-align: center;
+    background-image: url('../img/di-lorenzo/LORENZO01.jpg');
+    background-size: contain;
+    /* Ajusta a imagem para caber na seção sem cortar */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+    /* Altura automática */
+    padding-top: 56.25%;
+    /* Proporção 16:9 para a altura da seção */
+    position: relative;
+}
+
+/*/ CAPA*/
+
+/*SOBRE*/
+section {
+    background-color: var(--header-color);
+    min-height: 80vh;
+    padding: 4rem 4rem 2rem;
+}
+
+.sobre-content, .diferenciais-content {
+    width: 100%;
+}
+
+.sobre-content h3, .diferenciais-content h3, .contato-content h3 {
+    color: var(--text-color-wht);
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.sobre-content p {
+    color: var(--text-color-wht);
+    margin-top: 1.2rem;
+    text-align: justify;
+    text-align: center;
+}
+
+/*SLIDER*/
+.slider {
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 0.7s;
+}
+
+.slide img {
+    width: 800px;
+}
+
+.manual-nav {
+    position: absolute;
+    width: 800px;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid var(--hover-color);
+    padding: 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: var(--header-color);
+}
+
+#radio1:checked~.primeiro {
+    margin-left: 0;
+
+}
+
+#radio2:checked~.primeiro {
+    margin-left: -25%;
+}
+
+#radio3:checked~.primeiro {
+    margin-left: -50%;
+}
+
+#radio4:checked~.primeiro {
+    margin-left: -75%;
+}
+
+#radio5:checked~.primeiro {
+    margin-left: -100%;
+}
+
+#radio6:checked~.primeiro {
+    margin-left: -125%;
+}
+
+#radio7:checked~.primeiro {
+    margin-left: -150%;
+}
+
+.nav-auto div {
+    border: 2px solid var(--hover-color);
+    padding: 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 370px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.nav-auto .auto-btn1, #radio2:checked~.nav-auto .auto-btn2, #radio3:checked~.nav-auto .auto-btn3, #radio4:checked~.nav-auto .auto-btn4, #radio5:checked~.nav-auto .auto-btn5, #radio6:checked~.nav-auto .auto-btn6, #radio7:checked~.nav-auto .auto-btn7 {
+    background-color: var(--header-color);
+}
+
+/*DIFERENCIAIS */
+#diferenciais ul {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+
+}
+
+#diferenciais ul li {
+    color: var(--header-color);
+    width: 45%;
+    margin-bottom: 20px;
+    background-color: var(--text-color-wht);
+    padding: 20px;
+    border-radius: 50px;
+}
+
+/*LGPD*/
+.cookies-msg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--back-cookies-color);
+    color: var(--text-color-wht);
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+}
+
+.cookies-msg.mostrar {
+    display: block;
+}
+
+.cookies-msg .cookies-txt {
+    align-items: center;
+}
+
+.cookies-msg a {
+    color: var(--btn-cookies-color);
+    text-decoration: underline;
+}
+
+.cookies-msg button {
+    align-items: center;
+    background-color: var(--btn-cookies-color);
+    color: var(--text-color-wht);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.2s;
+}
+
+.cookies-msg button:hover {
+    background-color: #45a049;
+    transform: scale(0.9);
+}
+
+/*FOOTER*/
+
+footer {
+    text-align: center;
+    background-color: var(--footer-color);
+    color: var(--text-color-wht);
+    padding: 20px 0;
+}
+
+/*CONTATO*/
+
+.redes-sociais a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: solid 0.15rem var(--hover-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--text-color-wht);
+    margin: 1.8rem 0.5rem;
+    transition: 0.5s ease;
+}
+
+.redes-sociais a:hover {
+    color: var(--hover-color);
+    box-shadow: 0 0 0.3rem var(--hover-color);
+}
+
+.icon-whats {
+    position: fixed;
+    bottom: 60px;
+    height: 30px;
+    background-color: var(--body-color);
+    color: var(--btn-cookies-color);
+    border-radius: 50%;
+    padding: 3px;
+    width: 4.5rem;
+    height: 4.5rem;
+    text-align: center;
+    text-decoration: none;
+    z-index: 100;
+    box-shadow: 2px 2px 2px black;
+    margin-left: 1300px;
+    margin-bottom: 60px;
+    transition: 0.4s;
+}
+
+.bx {
+    padding: 3px;
+    font-size: 55px;
+
+}
+
+.icon-whats:hover {
+    background-color: var(--btn-cookies-color);
+    color: var(--text-color-wht);
+    font-weight: 900px;
+    box-shadow: 2px 2px 2px var(--hover-color);
+    transform: scale(0.9);
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*MENU HANBURGUER*/
+.menu-hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 2rem;
+    height: 0.3rem;
+    background-color: var(--menu-hamburguer);
+    margin: 0.4rem 0;
+    transition: 0.3s ease;
+}
+
+.change .bar1 {
+    transform: translate(0, 0.65rem) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -0.65rem) rotate(45deg);
+}
+
+/*RESPONSIVO*/
+
+@media screen and (min-width: 0px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+    }
+
+    .nav-responsivo a {
+        display: block;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .img-di-lorenzo {
+        background-image: url('../img/di-lorenzo/LORENZO01.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: auto;
+        padding-top: 56.25%;
+        margin-top: 4rem;
+        position: relative;
+        background-color: var(--header-color);
+    }
+
+    .sobre-content {
+        margin: -2.7em;
+        align-items: center;
+        width: 135%;
+    }
+
+    .sobre-content h2, .diferenciais-content h2, .contato-content h2 {
+        color: var(--text-color-wht);
+        text-align: center;
+    }
+
+    .sobre-content h3 {
+        font-size: 1.0rem;
+        line-height: 1.7rem;
+    }
+
+    .sobre-content p {
+        text-align: justify;
+    }
+
+    .slider {
+        text-align: center;
+        width: 325px;
+        height: 200px;
+    }
+
+    .slide img {
+        width: 325px;
+        height: 200px;
+    }
+
+    .manual-btn {
+        display: none;
+    }
+
+    .nav-auto div {
+        display: none;
+    }
+
+    #diferenciais ul {
+        margin: -2.7em;
+        list-style: none;
+    }
+
+    #diferenciais ul li {
+        width: 140%;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+    .icon-whats {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-left: 310px;
+        margin-bottom: 190px;
+    }
+
+    .bx {
+        padding: 3px;
+        font-size: 2.7rem;
+    }
+
+    .redes-sociais a {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .cookies-btn {
+        display: flex;
+    }
+}
+@media screen and (min-width: 344px) {
+    .logo {
+        font-size: 0.8rem;
+    }
+    .nav-responsivo a {
+        font-size: 0.8rem;
+    }
+    .slider {
+        text-align: center;
+        width: 305px;
+        height: 200px;
+    }
+    .slide img {
+        width: 305px;
+        height: 200px;
+    }
+    .icon-whats {
+        margin-left: 280px;
+        margin-bottom: 205px;
+    }
+}
+@media screen and (min-width: 360px) {
+    .slider {
+        width: 315px;
+        height: 200px;
+    }
+
+    .slide img {
+        width: 315px;
+        height: 200px;
+    }
+
+    .icon-whats {
+        margin-left: 290px;
+    }
+}
+@media screen and (min-width: 390px) {
+    .slider {
+        width: 350px;
+        height: 200px;
+    }
+
+    .slide img {
+        width: 350px;
+        height: 200px;
+    }
+
+    .icon-whats {
+        margin-left: 320px;
+    }
+}
+@media screen and (min-width: 412px) {
+    .sobre-content {
+        width: 130%;
+    }
+
+    .slider {
+        text-align: center;
+        width: 360px;
+        height: 200px;
+    }
+
+    .slide img {
+        width: 360px;
+        height: 200px;
+    }
+
+    .icon-whats {
+        margin-left: 340px;
+    }
+}
+@media screen and (min-width: 414px) {
+    .logo {
+        font-size: 1rem;
+    }
+    .nav-responsivo a {
+        font-size: 1rem;
+    }
+    .sobre-content {
+        width: 130%;
+    }
+    .slider {
+        width: 350px;
+    }
+    .slide img {
+        width: 350px;
+    }
+    #diferenciais ul li {
+        width: 130%;
+    }
+
+    .icon-whats {
+        margin-left: 340px;
+        margin-bottom: 175px;
+    }
+
+}
+@media screen and (min-width: 430px) {
+    .sobre-content {
+        width: 125%;
+    }
+
+    .icon-whats {
+        margin-bottom: 165px;
+        margin-left: 365px;
+    }
+
+}
+@media screen and (min-width: 540px) {
+    .logo {
+        font-size: 1.4rem;
+    }
+    .nav-responsivo a {
+        font-size: 1.1rem;
+    }
+    .sobre-content {
+        width: 120%;
+    }
+    .slider {
+        text-align: center;
+        width: 450px;
+        height: 250px;
+    }
+
+    .slide img {
+        width: 450px;
+        height: 250px;
+    }
+    .icon-whats {
+        margin-bottom: 115px;
+        margin-left: 465px;
+    }
+    .cookies-msg button{
+        margin: 0 30px;
+    }
+}
+@media screen and (min-width: 667px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    .nav-responsivo a {
+        font-size: 1.1rem;
+    }
+    .sobre-content {
+        width: 115%;
+    }
+    .slider {
+        width: 550px;
+        height: 240px;
+    }
+    .slide img {
+        width: 550px;
+        height: 240px;
+    }
+    .icon-whats {
+        margin-left: 600px;
+        margin-bottom: 110px;
+    }
+    .redes-sociais a {
+        width: 3.8rem;
+        height: 3.8rem;
+    }   
+    .bx {
+        padding: 3px;
+        font-size: 2.7rem;
+    }
+    .cookies-btn {
+        display: flex;
+       justify-content: center;
+    }
+}
+@media screen and (min-width: 720px) {
+    .icon-whats {
+        margin-bottom: 115px;
+        margin-left: 650px;
+    }
+    .cookies-msg{
+         font-size: 1.1rem;
+    }
+}
+/*CORRIGIR*/
+@media screen and (min-width: 740px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+    }
+
+    .nav-responsivo a {
+        display: block;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .img-di-lorenzo {
+        background-image: url('../img/di-lorenzo/LORENZO01.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: auto;
+        padding-top: 56.25%;
+        margin-top: 4rem;
+        position: relative;
+        background-color: var(--header-color);
+    }
+
+    .sobre-content {
+        margin: -2.7em;
+        align-items: center;
+        width: 90%;
+    }
+
+    .sobre-content h2, .diferenciais-content h2, .contato-content h2 {
+        color: var(--text-color-wht);
+        text-align: center;
+    }
+
+    .sobre-content h3 {
+        font-size: 1.0rem;
+        line-height: 1.7rem;
+    }
+
+    .sobre-content p {
+        text-align: justify;
+    }
+
+    .slider {
+        text-align: center;
+        width: 325px;
+        height: 200px;
+    }
+
+    .slide img {
+        width: 325px;
+        height: 200px;
+    }
+
+    .manual-btn {
+        display: none;
+    }
+
+    .nav-auto div {
+        display: none;
+    }
+
+    #diferenciais ul {
+        margin: -2.7em;
+        list-style: none;
+    }
+
+    #diferenciais ul li {
+        width: 90%;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+    .icon-whats {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-left: 310px;
+        margin-bottom: 190px;
+    }
+
+    .bx {
+        padding: 3px;
+        font-size: 2.7rem;
+    }
+
+    .redes-sociais a {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .cookies-btn {
+        width: 90%;
+        display: flex;
+    }
+}
+@media screen and (min-width: 768px) {
+    .menu-hamburguer {
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+    .nav a{
+        font-size: 0.9rem;
+    }
+    .img-di-lorenzo {
+        margin-top: 3rem;
+    }
+    .sobre-content {
+        width: 113%;
+    }
+    .slider {
+        width: 690px;
+        height: 350px;
+    }
+
+    .slide img {
+        width: 690px;
+        height: 350px;
+    }
+    #diferenciais ul li {
+        width: 45%;
+        padding: 20px;
+    }
+
+    .icon-whats {
+        margin-left: 690px;
+        margin-bottom: 85px;
+    }
+}
+@media screen and (min-width: 820px) {
+    .slider {
+        width: 740px;
+        height: 380px;
+    }
+    .slide img {
+        width: 740px;
+        height: 380px;
+    }
+    .icon-whats {
+        margin-left: 735px;
+        margin-bottom: 85px;
+    }
+}
+@media screen and (min-width: 844px) {
+    .menu-hamburguer {
+        margin-right: 1rem;
+    }
+
+    .logo {
+        font-size: 1.9rem;
+    }
+
+    .nav-responsivo a {
+        font-size: 1.5rem;
+    }
+
+    .sobre-content {
+        width: 110%;
+    }
+
+    .slider {
+        width: 740px;
+        height: 250px;
+    }
+
+    .slide img {
+        width: 740px;
+        height: 250px;
+    }
+
+    .icon-whats {
+        margin-bottom: 80px;
+        margin-left: 780px;
+    }
+}
+@media screen and (min-width: 853px) {
+    .menu-hamburguer {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .slider {
+        width: 750px;
+        height: 350px;
+    }
+    .slide img {
+        width: 750px;
+        height: 350px;
+    }
+    .icon-whats {
+        margin-left: 770px;
+    }
+}
+@media screen and (min-width: 882px) {
+    .menu-hamburguer {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .nav-responsivo a {
+        font-size: 1.5rem;
+    }
+    .icon-whats {
+        margin-left: 815px;
+    }
+}
+@media screen and (min-width: 896px) {
+    .menu-hamburguer {
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .nav-responsivo a {
+        font-size: 1.5rem;
+    } 
+    .sobre-content {
+        margin: -2.0em;
+        width: 110%;
+    }
+    .slider {
+        width: 750px;
+        height: 250px;
+    }
+    .slide img {
+        width: 750px;
+        height: 250px;
+    }
+    .icon-whats {
+        margin-left: 830px;
+        margin-bottom: 80px;
+    }
+}
+@media screen and (min-width: 914px) {
+    .menu-hamburguer {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+}
+@media screen and (min-width: 915px) {
+    .nav-responsivo a {
+        font-size: 1.5rem;
+    }
+
+    .sobre-content {
+        width: 110%;
+    }
+
+    .slider {
+        width: 740px;
+        height: 250px;
+    }
+
+    .slide img {
+        width: 740px;
+        height: 250px;
+    }
+
+    .icon-whats {
+        margin-left: 850px;
+    }
+}
+@media screen and (min-width: 932px) {
+    .sobre-content {
+        margin: -2.0em;
+        width: 108%;
+    }   
+     .slider {
+        width: 800px;
+        height: 300px;
+    }
+    .slide img {
+        width: 800px;
+        height: 300px;
+    }
+    .icon-whats {
+        margin-left: 865px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .logo {
+        font-size: 1.1rem;
+    }
+    .nav a{
+        font-size: 1.1rem;
+    }
+    .sobre-content {
+        width: 107%;
+    }
+    .slider {
+        width: 800px;
+        height: 400px;
+    }
+    .slide img {
+        width: 800px;
+        height: 400px;
+    }
+    .icon-whats {
+        margin-left: 935px;
+    }
+}
+@media screen and (min-width: 1180px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+    .nav a{
+        font-size: 1.3rem;
+    }
+    .sobre-content p {
+        text-align: center;
+    }
+    .slider {
+        width: 950px;
+        height: 450px;
+    }
+    .slide img {
+        width: 950px;
+        height: 450px;
+    }
+    .icon-whats {
+        margin-bottom: 65px;
+        margin-left: 1095px;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .icon-whats {
+        margin-bottom: 65px;
+        margin-left: 1180px;
+    }
+}
+@media screen and (min-width: 1366px) {
+    .icon-whats {
+        margin-bottom: 65px;
+        margin-left: 1280px;
+    }
+}
+@media screen and (min-width: 1368px) {
+    .icon-whats {
+        margin-bottom: 65px;
+        margin-left: 1300px;
+    }
+}
+
+
+/* 740 - CORRIGIR*/

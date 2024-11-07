@@ -1,0 +1,17 @@
+Landing Page - Corretor de Imóveis Eder Lopes.
+
+Este projeto é uma aplicação web hospedada no xxxxx, desenvolvida com o objetivo de Captação de Leads, Destacar Imóveis, Estabelecer Credibilidade, Foco em conversão.
+
+Tecnologias Utilizadas
+
+HTML5
+CSS3
+JavaScript
+
+Funcionalidades
+
+Navegação Simples: Interface intuitiva e fácil de navegar.
+
+Design Responsivo: Otimizada para dispositivos móveis e desktops.
+
+Interatividade: Componentes interativos para melhorar a experiência do usuário.
